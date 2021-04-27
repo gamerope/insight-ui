@@ -124,7 +124,7 @@ jobs:
           result-encoding: string
           script: |
             const tag = context.payload.release.tag_name;
-            const [, major,] = tag.match(/^v([0-9]+)/);
+            const [, major] = tag.match(/^v([0-9]+)/);
             return major;
 
       - name: Set Docker tags and labels
